@@ -1,0 +1,39 @@
+.sort-and-filter {
+    display: flex;
+    align-items: center;
+}
+
+.sort-and-filter > * {
+    margin-right: 10px;
+}
+
+.tag-filter-input {
+    max-width: 150px;
+    display: inline;
+    margin-right: 1rem;
+}
+
+.RecTag {
+    margin: 0 0.25rem 0.25rem 0;
+    padding: 0.1rem 0.5rem;
+    border: 0;
+    border-radius: 5px;
+    background: #0c003a2b;
+    font-size: 0.9rem;
+}
+
+.RecTag.dontmiss {
+    background: #00b31e42;
+}
+
+.RecTag.recommend {
+    background: #0062b342;
+}
+
+.RecTag.iftime {
+    background: #b39b0042;
+}
+
+.RecTag.avoid {
+    background: #b32d0042;
+}

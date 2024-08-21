@@ -1,0 +1,12 @@
+// Override Bootstrap variables
+$primary: #4056a1; // Default Bootstrap primary color
+$secondary: #f2f0eb; // Default Bootstrap secondary color
+$success: #28a745;
+$info: #c5cbe3;
+$warning: #ffc107;
+$danger: #f13c1f;
+$light: #f8f9fa;
+$dark: #343a40;
+
+// Include Bootstrap SCSS
+@import "bootstrap/scss/bootstrap";

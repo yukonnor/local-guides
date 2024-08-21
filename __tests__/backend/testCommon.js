@@ -12,9 +12,9 @@ async function seedTestDatabase() {
     // SQL to insert test data
     const users = await db.query(`
     INSERT INTO users (username, password, email, is_admin)
-    VALUES ('testauthor', 'testpassword', 'testuser@example.com', FALSE),
-           ('testadmin', 'testpassword', 'testadmin@example.com', TRUE),
-           ('testviewer', 'testpassword', 'testviewer@example.com', FALSE)
+    VALUES ('testauthor', '$2b$13$zWm.mHd9IBxUK/OBGpCRAeIUfVKWvKtmvg1U93DMy20gnCnBeTZsi', 'testuser@example.com', FALSE),
+           ('testadmin', '$2b$13$vWONU1O3QzddsqGTOHUJWe3IB.tEQCzbAB.gO0mR3i1MAuK7hs9zm', 'testadmin@example.com', TRUE),
+           ('testviewer', '$2b$13$zWm.mHd9IBxUK/OBGpCRAeIUfVKWvKtmvg1U93DMy20gnCnBeTZsi', 'testviewer@example.com', FALSE)
     RETURNING id;`);
 
     const testAuthorId = users.rows[0].id;

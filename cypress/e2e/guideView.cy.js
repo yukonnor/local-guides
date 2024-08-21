@@ -5,14 +5,17 @@
 describe("Guide View", () => {
     it("can view public guides while logged out", () => {
         cy.visit("/guides/1");
+        cy.wait(250);
         cy.contains("h1", "Test Guide: San Francisco California").should("be.visible");
         cy.contains("About This Guide").should("be.visible");
 
         // can sort and filter
         cy.get(".GuidePlace").first().contains("Zeitgeist");
         cy.get(".sort-and-filter").contains("Rating").click();
+        cy.wait(250);
         cy.get(".GuidePlace").first().contains("Yosemite National Park");
         cy.get(".sort-and-filter").get("select").select("Family");
+        cy.wait(250);
         cy.contains("Zeitgeist").should("be.visible");
         cy.contains("Yosemite National Park").should("not.exist");
 

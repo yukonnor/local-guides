@@ -83,19 +83,19 @@ describe("authHandler", () => {
 
             const result = await verifyJWT(invalidToken, secret);
 
-            expect(result).toBeUndefined();
+            expect(result).toBeNull();
         });
 
         it("should return undefined if no secret is provided", async () => {
             const result = await verifyJWT(token, undefined);
 
-            expect(result).toBeUndefined();
+            expect(result).toBeNull();
         });
 
         it("should return undefined for a malformed token", async () => {
             const result = await verifyJWT("malformed.token", secret);
 
-            expect(result).toBeUndefined();
+            expect(result).toBeNull();
         });
     });
 

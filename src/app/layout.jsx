@@ -9,7 +9,6 @@ import { cookies } from "next/headers";
 import SessionDisplayHelper from "@/components/SessionDisplayHelper";
 import BootstrapBreakpointHelper from "@/components/BootstrapBreakpointHelper";
 import NavBar from "@/components/NavBar";
-import ToastComponent from "@/components/ToastComponent";
 
 // Display or hide dev helpers
 const SHOW_DEV_HELPERS = false;
@@ -19,6 +18,7 @@ import dynamic from "next/dynamic";
 const Toaster = dynamic(() => import("react-hot-toast").then((c) => c.Toaster), {
     ssr: false,
 });
+import ToastComponent from "@/components/ToastComponent";
 
 const inter = Inter_Tight({ subsets: ["latin"] });
 

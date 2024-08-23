@@ -1,7 +1,7 @@
-// import { getSession } from "@/lib/sessionHandler";
-// import { redirect } from "next/navigation";
+import { getSession } from "@/lib/sessionHandler";
+import { redirect } from "next/navigation";
 
-// export default async function Profile() {
-//     const session = await getSession();
-//     redirect(`/profile/${session.id}`);
-// }
+export default async function Profile() {
+    const session = await getSession();
+    redirect(`/profile/${session.id}`);
+}

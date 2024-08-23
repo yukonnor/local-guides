@@ -6,7 +6,7 @@ export const metadata = {
     title: "Login | Local Guides",
 };
 
-export default async function Login({ searchParams }) {
+export default async function Login({ searchParams = null }) {
     const alertType = searchParams?.alert;
 
     return (

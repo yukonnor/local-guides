@@ -12,12 +12,12 @@ async function seedTestDatabase() {
     // SQL to insert test data
     const users = await db.query(`
     INSERT INTO users (username, password, email, is_admin)
-    VALUES ('testauthor', '$2b$13$zWm.mHd9IBxUK/OBGpCRAeIUfVKWvKtmvg1U93DMy20gnCnBeTZsi', 'testuser@example.com', FALSE),
+    VALUES ('testuser', '$2b$13$zWm.mHd9IBxUK/OBGpCRAeIUfVKWvKtmvg1U93DMy20gnCnBeTZsi', 'testuser@example.com', FALSE),
            ('testadmin', '$2b$13$vWONU1O3QzddsqGTOHUJWe3IB.tEQCzbAB.gO0mR3i1MAuK7hs9zm', 'testadmin@example.com', TRUE),
            ('testviewer', '$2b$13$zWm.mHd9IBxUK/OBGpCRAeIUfVKWvKtmvg1U93DMy20gnCnBeTZsi', 'testviewer@example.com', FALSE)
     RETURNING id;`);
 
-    const testAuthorId = users.rows[0].id;
+    const testuserId = users.rows[0].id;
     const testAdminId = users.rows[1].id;
     const testViewerId = users.rows[2].id;
 
@@ -28,7 +28,7 @@ async function seedTestDatabase() {
                 ($1, 'ChIJIQBpAG2ahYAR_6128GcTUEo', 'Test Private Guide: San Francisco', TRUE, 37.7749, -122.4194, 'A private guide for San Francisco'),
                 ($1, 'ChIJIQBpAG2ahYAR_6128GcTUEo', 'Test Private Shared Guide: San Francisco', TRUE, 37.7749, -122.4194, 'A shared guide for San Francisco')
          RETURNING id`,
-        [testAuthorId]
+        [testuserId]
     );
 
     const publicGuideId = guides.rows[0].id;

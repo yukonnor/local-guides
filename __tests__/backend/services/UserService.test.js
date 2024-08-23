@@ -41,7 +41,7 @@ describe("User Service", () => {
             expect(result[0]).toEqual(
                 expect.objectContaining({
                     id: expect.any(Number),
-                    username: "testauthor",
+                    username: "testuser",
                     email: "testuser@example.com",
                     isAdmin: false,
                     createdAt: expect.any(Object),
@@ -78,7 +78,7 @@ describe("User Service", () => {
             expect(result).toEqual(
                 expect.objectContaining({
                     id: expect.any(Number),
-                    username: "testauthor",
+                    username: "testuser",
                     email: "testuser@example.com",
                     isAdmin: false,
                     createdAt: expect.any(Object),
@@ -106,12 +106,12 @@ describe("User Service", () => {
 
     describe("getUserByUsername", () => {
         it("should return a specific user based on username", async () => {
-            const result = await UserService.getUserByUsername("testauthor");
+            const result = await UserService.getUserByUsername("testuser");
 
             expect(result).toEqual(
                 expect.objectContaining({
                     id: expect.any(Number),
-                    username: "testauthor",
+                    username: "testuser",
                     email: "testuser@example.com",
                     isAdmin: false,
                     createdAt: expect.any(Object),
@@ -211,7 +211,7 @@ describe("User Service", () => {
 
     describe("authenticateUser", () => {
         const CREDS = {
-            username: "testauthor",
+            username: "testuser",
             password: "testpassword",
         };
 
@@ -223,7 +223,7 @@ describe("User Service", () => {
             expect(result).toEqual(
                 expect.objectContaining({
                     id: expect.any(Number),
-                    username: "testauthor",
+                    username: "testuser",
                     email: "testuser@example.com",
                     isAdmin: false,
                     createdAt: expect.any(Object),

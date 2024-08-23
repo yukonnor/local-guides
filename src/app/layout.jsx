@@ -14,11 +14,11 @@ import NavBar from "@/components/NavBar";
 const SHOW_DEV_HELPERS = false;
 
 // Toast setup & toast handling via cookies
-import dynamic from "next/dynamic";
-const Toaster = dynamic(() => import("react-hot-toast").then((c) => c.Toaster), {
-    ssr: false,
-});
-import ToastComponent from "@/components/ToastComponent";
+// import dynamic from "next/dynamic";
+// const Toaster = dynamic(() => import("react-hot-toast").then((c) => c.Toaster), {
+//     ssr: false,
+// });
+// import ToastComponent from "@/components/ToastComponent";
 
 const inter = Inter_Tight({ subsets: ["latin"] });
 
@@ -34,12 +34,12 @@ export default async function RootLayout({ children }) {
     return (
         <html lang="en">
             <body className={inter.className}>
-                <Toaster />
+                {/* <Toaster /> */}
                 <NavBar session={session} handleLogout={handleLogout} />
                 {children}
-                {toastMessage?.value && (
+                {/* {toastMessage?.value && (
                     <ToastComponent toastValue={JSON.parse(toastMessage.value)} />
-                )}
+                )} */}
                 {/* Display development helpers when developing */}
                 {SHOW_DEV_HELPERS ? (
                     <>

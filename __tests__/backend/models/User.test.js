@@ -34,7 +34,7 @@ describe("User Model", () => {
             expect(result[0]).toEqual(
                 expect.objectContaining({
                     id: expect.any(Number),
-                    username: "testauthor",
+                    username: "testuser",
                     email: "testuser@example.com",
                     isAdmin: false,
                     createdAt: expect.any(Object),
@@ -59,7 +59,7 @@ describe("User Model", () => {
             expect(result).toEqual(
                 expect.objectContaining({
                     id: expect.any(Number),
-                    username: "testauthor",
+                    username: "testuser",
                     email: "testuser@example.com",
                     isAdmin: false,
                     createdAt: expect.any(Object),
@@ -80,12 +80,12 @@ describe("User Model", () => {
 
     describe("getByUsername", () => {
         it("should return a user", async () => {
-            const result = await User.getByUsername("testauthor");
+            const result = await User.getByUsername("testuser");
 
             expect(result).toEqual(
                 expect.objectContaining({
                     id: expect.any(Number),
-                    username: "testauthor",
+                    username: "testuser",
                     email: "testuser@example.com",
                     isAdmin: false,
                     createdAt: expect.any(Object),
@@ -128,7 +128,7 @@ describe("User Model", () => {
 
         it("should return a BadRequest error if dupe username provided", async () => {
             const dupeUser = {
-                username: "testauthor",
+                username: "testuser",
                 password: "password",
                 email: "testuser@example.com",
                 isAdmin: false,
@@ -145,7 +145,7 @@ describe("User Model", () => {
 
     describe("update", () => {
         it("should update a user", async () => {
-            const user = await User.getByUsername("testauthor");
+            const user = await User.getByUsername("testuser");
 
             const data = {
                 email: "newemail@example.com",
@@ -156,7 +156,7 @@ describe("User Model", () => {
             expect(result).toEqual(
                 expect.objectContaining({
                     id: expect.any(Number),
-                    username: "testauthor",
+                    username: "testuser",
                     email: "newemail@example.com",
                     isAdmin: false,
                     createdAt: expect.any(Object),
@@ -179,7 +179,7 @@ describe("User Model", () => {
         });
 
         it("should throw an error if isAdmin is attempted to be modified", async () => {
-            const user = await User.getByUsername("testauthor");
+            const user = await User.getByUsername("testuser");
 
             const data = {
                 isAdmin: true,

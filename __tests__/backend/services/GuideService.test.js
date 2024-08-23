@@ -112,7 +112,7 @@ describe("Guide Service", () => {
 
     describe("getGuideByAuthorId", () => {
         it("should return guides associated with a given user id", async () => {
-            const user = await User.getByUsername("testauthor");
+            const user = await User.getByUsername("testuser");
             const result = await GuideService.getGuideByAuthorId(user.id);
 
             expect(result.length).toEqual(4);

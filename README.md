@@ -2,7 +2,7 @@
 
 **Local Guides** is a web application where users can both create guides highlighting places they recommend and find guides created by others to get curated recommendations about a place they are visiting. 
 
-**https://local-guides.onrender.com/**  **TBD UPDATE URL IF NEEDED**
+**https://local-guides.onrender.com/** 
 
 <img width="741" alt="local_guides" src="https://github.com/user-attachments/assets/19951492-0e73-4f0e-9816-91eaf39808c9">
 

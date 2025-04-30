@@ -4,7 +4,7 @@
 
 **https://local-guides.onrender.com/** 
 
-<img width="741" alt="local_guides" src="https://github.com/user-attachments/assets/19951492-0e73-4f0e-9816-91eaf39808c9">
+<img width="741" alt="local_guides" src="https://github.com/yukonnor/local-guides/blob/main/public/Local%20Guides%20UI%20Sample.png">
 
 
 
@@ -106,7 +106,7 @@ This app employs a frontend and backend unit testing suite using **Jest** and **
 3. If you'd just like to view the specs running in the Cypress UI, run the command `npm run cypress:open`
 
 ## DB Schema
-<img width="865" alt="local_guides_schema" src="https://github.com/user-attachments/assets/dd534ab9-9fb7-4ccf-8220-2779e76394af">
+<img width="865" alt="local_guides_schema" src="https://github.com/yukonnor/local-guides/blob/main/public/Local%20Guides%20DB%20Schema.png">
 
 -   **Users**
     -   id (PK)
